@@ -1,0 +1,409 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    background-color: #0d0d0d; /* Dark gray-black background */
+    color: #4affff; /* Electric cyan for text */
+    line-height: 1.6;
+}
+
+header {
+    background-color: #1a1a1a; /* Darker header for contrast */
+    color: #4affff;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(74, 255, 255, 0.2); /* Cyan glow shadow */
+    border-bottom: 2px solid #00aaff; /* Blue border for a defined edge */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 2rem;
+}
+
+.logo {
+    color: #00aaff; /* Neon blue */
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-shadow: 0 0 8px #00aaff; /* Glow effect on the logo */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2.5rem;
+}
+
+.nav-links a {
+    color: #e6e6e6; /* Off-white for readability */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: #ff00e6; /* Electric magenta on hover */
+    text-shadow: 0 0 10px #ff00e6; /* Intense magenta glow on hover */
+}
+
+main {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem;
+}
+
+section {
+    padding: 5rem 0;
+}
+
+#hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    gap: 3rem;
+    flex-wrap: wrap;
+    background: linear-gradient(135deg, #1a1a1a, #2a2a2a); /* Dark gradient */
+    padding: 4rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(74, 255, 255, 0.4); /* Stronger cyan glow */
+    border: 1px solid #4affff;
+}
+
+.hero-content {
+    flex: 1;
+    min-width: 300px;
+    color: #ffffff;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: #ff00e6; /* Magenta heading */
+    text-shadow: 0 0 20px #ff00e6;
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    margin-bottom: 2.5rem;
+    color: #b3e6ff; /* Lighter blue for contrast */
+}
+
+.cta-button {
+    background-color: #4affff; /* Cyan CTA button */
+    color: #0d0d0d;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+    font-size: 1.1rem;
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(74, 255, 255, 0.7);
+}
+
+.cta-button:hover {
+    background-color: #ff00e6; /* Turns magenta on hover */
+    color: #ffffff;
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(255, 0, 230, 0.8);
+}
+
+.hero-image {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+.hero-image img {
+    border-radius: 50%;
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 0 35px rgba(74, 255, 255, 0.6);
+    border: 5px solid #ff00e6; /* Magenta border */
+}
+
+
+
+#about, #projects, #contact {
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(74, 255, 255, 0.2);
+    margin-bottom: 3rem;
+    padding: 3rem;
+    border: 1px solid #00aaff;
+}
+
+#about h2, #projects h2, #contact h2 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    color: #4affff;
+    position: relative;
+    text-shadow: 0 0 10px #4affff;
+}
+
+#about h2::after, #projects h2::after, #contact h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #ff00e6;
+    margin: 1rem auto 0;
+    border-radius: 2px;
+    box-shadow: 0 0 8px #ff00e6;
+}
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+}
+
+.project-card {
+    background-color: #2a2a2a;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border-top: 5px solid #00aaff;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 170, 255, 0.5);
+}
+
+.project-card img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.project-card h3 {
+    margin-top: 0;
+    color: #4affff;
+    font-size: 1.8rem;
+    text-shadow: 0 0 5px #4affff;
+}
+
+.project-card p {
+    color: #e6e6e6;
+}
+
+.project-card a {
+    display: inline-block;
+    margin-top: 1.5rem;
+    color: #ff00e6;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.project-card a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+
+form {
+    max-width: 700px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    padding: 2rem;
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(74, 255, 255, 0.2);
+    border: 1px solid #ff00e6;
+}
+
+form label {
+    font-weight: bold;
+    color: #4affff;
+    font-size: 1.1rem;
+}
+
+form input, form textarea {
+    width: calc(100% - 20px);
+    padding: 0.8rem 10px;
+    border: 1px solid #333333;
+    background-color: #0d0d0d;
+    color: #e6e6e6;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #4affff;
+    box-shadow: 0 0 0 3px rgba(74, 255, 255, 0.5), 0 0 10px 5px rgba(74, 255, 255, 0.3);
+    outline: none;
+}
+
+form button {
+    background-color: #ff00e6;
+    color: #ffffff;
+    padding: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 0 15px rgba(255, 0, 230, 0.7);
+}
+
+form button:hover {
+    background-color: #4affff;
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(74, 255, 255, 0.8);
+}
+
+footer {
+    background-color: #1a1a1a;
+    color: #4affff;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 3rem;
+    font-size: 0.9rem;
+    border-top: 1px solid #00aaff;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .logo {
+        margin-bottom: 1rem;
+    }
+
+    #hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 3rem 2rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    #about h2, #projects h2, #contact h2 {
+        font-size: 2rem;
+    }
+
+    .project-container {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        padding: 1rem;
+    }
+
+    form {
+        padding: 1.5rem;
+    }
+}
+/* General Animations and Haptic Feel */
+body {
+    transition: background-color 0.5s ease;
+}
+
+header {
+    transition: box-shadow 0.3s ease;
+}
+
+nav {
+    transition: background-color 0.3s ease;
+}
+
+/* Enhances button and link hover effects with a "press" or "lift" feeling */
+.cta-button {
+    transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transform: perspective(1px) translateZ(0);
+}
+
+.cta-button:hover {
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0 10px 20px rgba(74, 255, 255, 0.5);
+}
+
+.cta-button:active {
+    transform: scale(0.95);
+}
+
+.nav-links a {
+    transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transform: perspective(1px) translateZ(0);
+}
+
+.nav-links a:hover {
+    transform: translateY(-3px);
+    text-shadow: 0 0 10px #ff00e6;
+}
+
+/* Keyframe animations for a persistent, subtle digital glow */
+@keyframes flicker {
+    0% { opacity: 1; }
+    50% { opacity: 0.8; }
+    100% { opacity: 1; }
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 10px 5px rgba(74, 255, 255, 0.2); }
+    50% { box-shadow: 0 0 20px 10px rgba(74, 255, 255, 0.4); }
+    100% { box-shadow: 0 0 10px 5px rgba(74, 255, 255, 0.2); }
+}
+
+/* Apply animations to key elements */
+.logo {
+    animation: flicker 1.5s infinite alternate;
+}
+
+#hero {
+    animation: pulse 3s infinite;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 170, 255, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:active {
+    transform: translateY(0px);
+}
+
+/* Subtle border glow on form inputs when focused */
+form input:focus, form textarea:focus {
+    box-shadow: 0 0 0 3px rgba(0, 170, 255, 0.5), 0 0 10px 5px rgba(0, 170, 255, 0.3);
+    border-color: #00aaff;
+}

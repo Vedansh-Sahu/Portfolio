@@ -1,0 +1,141 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: 'Share Tech Mono', monospace; /* Retro techy font */
+}
+
+body {
+    background: linear-gradient(to bottom right, #0a0a0a, #2c0c3a); /* Dark, futuristic gradient */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #e0e0e0;
+    overflow: hidden; /* To handle potential glow overflows */
+}
+
+.calculator-container {
+    background-color: rgba(10, 0, 15, 0.9); /* Darker background */
+    backdrop-filter: blur(8px);
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(78, 205, 196, 0.4); /* Aqua glow */
+    padding: 25px;
+    width: 340px;
+    border: 1px solid #4ecdc4; /* Subtle border */
+    position: relative;
+    overflow: hidden;
+    animation: containerGlow 5s infinite alternate;
+}
+
+@keyframes containerGlow {
+    0% { box-shadow: 0 0 20px rgba(78, 205, 196, 0.4); }
+    100% { box-shadow: 0 0 35px rgba(255, 0, 255, 0.6); } /* Pinkish glow */
+}
+
+.calculator-display {
+    background-color: #000000;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: right;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    word-wrap: break-word;
+    word-break: break-all;
+    min-height: 90px;
+    color: #4ecdc4; /* Aqua display text */
+    position: relative;
+    border: 1px solid #4ecdc4;
+    box-shadow: inset 0 0 15px rgba(78, 205, 196, 0.5); /* Inner glow */
+    font-family: 'Orbitron', sans-serif; /* More impactful font for numbers */
+}
+
+.calculator-display .previous-operand {
+    font-size: 1.1rem;
+    color: #888;
+    min-height: 20px;
+}
+
+.calculator-display .current-operand {
+    font-size: 2.8rem;
+    font-weight: 600;
+    text-shadow: 0 0 8px rgba(78, 205, 196, 0.8); /* Neon text glow */
+}
+
+.calculator-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 12px;
+}
+
+.calculator-grid button {
+    background-color: #1a0a20; /* Dark button background */
+    color: #e0e0e0;
+    border: none;
+    border-radius: 8px; /* Slightly less rounded */
+    padding: 18px;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 0 5px rgba(78, 205, 196, 0.3); /* Subtle button glow */
+    border: 1px solid #3c1e4d;
+}
+
+.calculator-grid button:hover {
+    background-color: #2b0d38;
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.6), 0 0 10px rgba(78, 205, 196, 0.4); /* Dual neon glow */
+    color: #fff;
+}
+
+.calculator-grid button:active {
+    transform: translateY(0);
+    box-shadow: 0 0 5px rgba(78, 205, 196, 0.3);
+}
+
+.calculator-grid .span-two {
+    grid-column: span 2;
+}
+
+.calculator-grid [data-operation], .calculator-grid [data-delete], .calculator-grid [data-all-clear] {
+    background-color: #3b0f4d; /* Operator buttons with a distinct color */
+    color: #ff99ff; /* Pinkish text for operators */
+    text-shadow: 0 0 5px #ff99ff;
+    border: 1px solid #ff99ff;
+}
+
+.calculator-grid [data-operation]:hover, .calculator-grid [data-delete]:hover, .calculator-grid [data-all-clear]:hover {
+    background-color: #4c1264;
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.8);
+}
+
+.calculator-grid [data-equals] {
+    background: linear-gradient(135deg, #4ecdc4, #c74c93); /* Aqua to Pink gradient for equals */
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 0 0 10px #fff;
+    box-shadow: 0 0 20px rgba(78, 205, 196, 0.8);
+    border: none;
+}
+
+.calculator-grid [data-equals]:hover {
+    background: linear-gradient(135deg, #6fdcdc, #d459a0);
+    box-shadow: 0 0 30px rgba(255, 0, 255, 1);
+}
+
+@media (max-width: 400px) {
+    .calculator-container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .calculator-grid button {
+        font-size: 1.1rem;
+        padding: 15px;
+    }
+
+    .calculator-display .current-operand {
+        font-size: 2.2rem;
+    }
+}

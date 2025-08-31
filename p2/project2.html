@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lunar Stone, Paper, Scissors</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Lunar Stone, Paper, Scissors</h1>
+        <div class="score-board">
+            <div class="player-score">Player 1: <span id="player-score">0</span></div>
+            <div class="computer-score">Player 2: <span id="computer-score">0</span></div>
+        </div>
+        <div class="choices">
+            <button class="choice-button" data-choice="stone">
+                <img src="https://img.icons8.com/plasticine/100/000000/rock.png" alt="Stone">
+                <span>Stone</span>
+            </button>
+            <button class="choice-button" data-choice="paper">
+                <img src="https://img.icons8.com/plasticine/100/000000/paper.png" alt="Paper">
+                <span>Paper</span>
+            </button>
+            <button class="choice-button" data-choice="scissors">
+                <img src="https://img.icons8.com/plasticine/100/000000/scissors.png" alt="Scissors">
+                <span>Scissors</span>
+            </button>
+        </div>
+        <div class="game-status">Choose your weapon!</div>
+        <button class="reset-button">Reset Game</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

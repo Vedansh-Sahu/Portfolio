@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VS Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="#" class="logo">Vedansh Sahu</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <h1>Hi, I'm Vedansh Sahu</h1>
+                <p>A Web Developer passionate about creating beautiful and functional websites.</p>
+                <a href="#projects" class="cta-button">View My Work</a>
+            </div>
+            <div class="hero-image">
+                <img src="SEB.jpg" alt="Profile Picture">
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I'm a self-taught developer with a strong foundation in front-end technologies. I love building
+                responsive and user-friendly web applications. My skills include HTML, CSS, JavaScript, and various
+                frameworks.</p>
+        </section>
+
+        <section id="projects">
+            <h2>My Projects</h2>
+            <div class="project-container">
+                <div class="project-card">
+                    <img src="Calc.png" alt="Project 1">
+                    <h3>Retro Futuristic Calculator</h3>
+                    <p>This calculator is more than a tool; it's a piece of tech from a retro-futuristic world. Its
+                        design blends the aesthetics of 1980s sci-fi with clean, modern lines. The dark body pulses with
+                        a subtle neon glow, casting a vibrant contrast against its cosmic black chassis. </p>
+                    <a href="p1/project1.html" target="_blank">Learn More</a>
+                </div>
+                <div class="project-card">
+                    <img src="p2.png" alt="Project 2">
+                    <h3>Rock Paper Scissors</h3>
+                    <p>Unleash a cosmic clash in this retro-futuristic game! Command Stone, Paper, or Scissors with
+                        neon-lit flair as you challenge a friend to a best-of-five showdown. This isn't just a game;
+                        it's a nostalgic journey back to the digital frontier of classic arcade battles.</p>
+                    <a href="p2/project2.html" target="_blank">Learn More</a>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 MyPortfolio</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
